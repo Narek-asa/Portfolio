@@ -1,6 +1,7 @@
 :root {
   --text-color: #eeeff1;
-  --link-color: #4a76ee;
+  --link-color: #eeeff1;
+  --hover-color: #4a76ee;
   --background-color: #1a1c20;
 }
 
@@ -35,7 +36,7 @@ nav {
 
 nav .left a{
   color: var(--text-color);
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -44,11 +45,8 @@ nav .right a {
   margin: 0 10px;
 }
 
-nav .right a:last-child {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  padding: 5px 15px;
-  border-radius: 5px;
+nav .right a:hover {
+  color: var(--hover-color);
 }
 
 nav .right a span {
@@ -91,8 +89,8 @@ nav .right a span {
 }
 
 .hero-section .text .links a:hover {
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+  color: var(--hover-color);
+  border: 2px solid var(--hover-color);
 }
 
 .hero-section .headshot {
@@ -140,8 +138,8 @@ nav .right a span {
   width: 200px;
   padding: 10px 20px;
   margin: 10px;
-  border: 1.5px solid #d3d3d3;
-  border-radius: 5px;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
 
 }
 .skills-section .cells .cell img {
@@ -154,6 +152,68 @@ nav .right a span {
 .skills-section .cells .cell span {
   font-size: 18px;
   color: var(--text-color);
+}
+
+/* LARGE-SCREEN OPTIMIZATIONS (width ≥ 1920px) */
+@media (min-width: 1920px) {
+  /* NAVBAR */
+  nav {
+    padding: 0 100px;
+    height: 90px;
+  }
+  nav .left a {
+    font-size: 32px;
+  }
+  nav .right a {
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  /* HERO SECTION */
+  .hero-section {
+    padding: 0 100px;
+    margin: 80px 0;
+    gap: 60px;
+  }
+  .hero-section .text h2 {
+    font-size: 50px;
+  }
+  .hero-section .text p {
+    font-size: 25px;
+  }
+  .hero-section .text .links {
+    margin-top: 60px;
+  }
+  .hero-section .text .links a {
+    padding: 8px 15px;
+  }
+  .hero-section .headshot img {
+    width: 500px;
+  }
+
+  /* SKILLS SECTION */
+  .skills-section {
+    padding: 0 100px;
+    margin-bottom: 120px;
+  }
+  .skills-section h2 {
+    font-size: 40px;
+  }
+  .skills-section .text {
+    font-size: 20px;
+  }
+  .skills-section .cells .cell {
+    width: 250px;
+    padding: 15px 30px;
+    gap: 15px;
+  }
+  .skills-section .cells .cell img {
+    width: 40px;
+    height: 40px;
+  }
+  .skills-section .cells .cell span {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 850px) {
@@ -213,6 +273,8 @@ nav .right a span {
     font-size: 16px;
   }
 }
+
+
 
 
 
